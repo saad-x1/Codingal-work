@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Hello world</title>
-    </head>
-    <body>
-        <p id="demo">this is paragraph</p>
-        <p id="add"></p>
-        <p id="addition"></p>
-        <script>
-            document.write("Hello world");
-            document.getElementById("demo").innerHTML="Welcome to javascript";
-
-            var number1 = 10; //declaring variables
-            var number2 = 30;
-            var sum = number1 + number2;
-            document.write("</br>The sum is " + sum); //printing variable
-
-            var subtract = number2 - number1;
-            document.write("</br>The subtraction is " + subtract);
-
-            var multiply = number1 * number2;
-            document.write("</br>The multiplication is " + multiply);
-
-            var divide = number2 / number1;
-            document.write("</br>The division is " + divide);
-
-        </script>
-    </body>
-</html>
-
+<head>
+  <title>Calculator</title>
+</head>
+<body>
+  <input id="display" readonly>
+  <br>
+  <button onclick="display.value=''">C</button>
+  <button onclick="display.value+='/';">/</button>
+  <button onclick="display.value+='*';">*</button>
+  <button onclick="display.value+='-';">-</button>
+  <br>
+  <button onclick="display.value+='7';">7</button>
+  <button onclick="display.value+='8';">8</button>
+  <button onclick="display.value+='9';">9</button>
+  <button onclick="display.value+='+';">+</button>
+  <br>
+  <button onclick="display.value+='4';">4</button>
+  <button onclick="display.value+='5';">5</button>
+  <button onclick="display.value+='6';">6</button>
+  <button onclick="display.value=eval(display.value)">=</button>
+  <br>
+  <button onclick="display.value+='1';">1</button>
+  <button onclick="display.value+='2';">2</button>
+  <button onclick="display.value+='3';">3</button>
+  <br>
+  <button onclick="display.value+='0';">0</button>
+  <button onclick="display.value+='.';">.</button>
+</body>
 </html>
