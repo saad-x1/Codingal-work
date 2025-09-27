@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello world</title>
+    </head>
+    <body>
+        <h1 class="title">Hello world!</h1>
+        <script>
+            var name = "saad";
+            document.write("<br/>" + name.toUpperCase());
+            document.write("<br/>" + name.toLowerCase());
+            document.write("<br/>" + name.startsWith("a"));
+
+            var string = "i am learning javascript";
+            var pattern = new RegExp("html");
+            var result = pattern.test(string);
+            document.write("<br/>the result is " + result);
+
+            for (i = 0; i < 10; i++) {
+                document.write("<br/> hello world " + i);
+            }
+
+            var fruits = ["apples,banana", "cherry", "kiwi", "pineapple"];
+            var text = "";
+            for (i = 0; i < fruits.length; i++) {
+                text += fruits[i] + "<br/>";
+            }
+            document.write("<br/>the list of fruits are<br/>" + text);
+
+            switch (new Date().getDay()) {
+                case 0:
+                    document.write("<br/> sunday <br/>");
+                    break;
+                case 1:
+                    document.write("<br/> monday <br/>");
+                    break;
+                case 2:
+                    document.write("<br/> tuesday <br/>");
+                    break;
+                case 3:
+                    document.write("<br/> wednesday <br/>");
+                    break;
+                case 4:
+                    document.write("<br/> thursday <br/>");
+                    break;
+                case 5:
+                    document.write("<br/> friday <br/>");
+                    break;
+                case 6:
+                    document.write("<br/> saturday <br/>");
+                    break;
+            }
+        </script>
+    </body>
+</html>
