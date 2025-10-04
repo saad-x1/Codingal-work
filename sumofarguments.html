@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Functions & Sum of Arguments</title>
+</head>
+<body>
+    <script>
+        var value = -345;
+        document.write("<br/> Absolute value: " + Math.abs(value));
+        document.write("<br/> sin(76) = " + Math.sin(76));
+        document.write("<br/> tan(43) = " + Math.tan(43));
+        document.write("<br/> asin(90) = " + Math.asin(90));
+        document.write("<br/> acos(12) = " + Math.acos(12));
+        document.write("<br/> atan(32) = " + Math.atan(32));
+        function sumOfArguments() {
+            var sum = 0;
+            for (var i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+            return sum;
+        }
+
+        document.write("<br/> Sum of arguments (50,20,30,90) = " + sumOfArguments(50, 20, 30, 90));
+    </script>
+</body>
+</html>

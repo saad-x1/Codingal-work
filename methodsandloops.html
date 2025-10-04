@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Output:</h3>
+<p id="output"></p>
+
+<script>
+  let output = "";
+
+  let date = new Date();
+  output += "Current Date: " + date.toLocaleString() + "<br><br>";
+  output += "Random Numbers: ";
+  for (let i = 0; i < 5; i++) {
+    let num = Math.floor(Math.random() * 100) + 1;
+    output += num + " ";
+  }
+
+  let floatNum = Math.random() * 100;
+  let rounded = floatNum.toFixed(2);
+  output += "<br><br>Rounded Random Number: " + rounded;
+
+  document.getElementById("output").innerHTML = output;
+</script>
+
+</body>
+</html>
+
+
