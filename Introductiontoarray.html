@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Hello world</title></head>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+<script>
+    marks=0;
+    marks_number=[10,1,22,3,5,67,8,9,0]
+    var fruits=["Apples","Banana","Kiwi","Figs","grapes"]
+    document.write(fruits)
+    document.write("<br/>"+fruits[4])
+    document.getElementById("demo").innerHTML=fruits[0]
+
+    var books=["html","php","java","sql","css"]
+    document.getElementById("demo1").innerHTML=books.join("a")
+    document.getElementById("demo2").innerHTML=books.pop();
+    document.write("<br/>"+books)
+    document.getElementById("demo2").innerHTML=books.pop();
+    document.write("<br/>"+books)
+
+    function add(a,b){
+        return a+b;
+    }
+
+    function average(a,b){
+        return add(a,b)/2;
+    }
+    
+    var result=average(10,13);
+    document.write("<br/> the result is"+ result)
+
+</script>
+</body>
+</html>
