@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Hello world!</title></head>
+    <body>
+        <p id="demo"  style="color: red; background-color:yellow;">codingal</p>
+        <button type="button" onclick="add(3,4)">add numbers</button>
+        <button type="button" onclick="sub(3,4)">subtract numbers</button>
+
+        <h1> validation form</h1>
+        <form id="loginform" onsubmit="validate(event)">
+            <fieldset>
+                <label> Enter your email</label>
+                <input type="email" id="email" name="email"/><br/>
+                <label>Enter your password</label>
+                <input type="password" id="password" name="password"/>
+                <label> Enter your age</label>
+                <input type="number" id="age" name="age"/><br/>
+                <button type="submit">login</button>
+                <div id="messagebox"></div>
+            </fieldset>
+        </form>
+        <script>
+            var text=document.getElementById("demo").innerHTML;
+            document.write("<br/>"+text)
+            function add(a,b){
+                document.getElementById("demo").innerHTML="<br/> the sum is"+ (a+b)
+            }
+            function sub(a,b){
+                document.getElementById("demo").innerHTML="br/> the sub is"+ (a-b)
+            }
+
+            function validate(e){
+                e.preventDefault();
+            const email=document.getElementById("email").value;
+            const password= document.getElementById("password").value;
+            const age=document.getElementById("age").value;
+            const msgbox=document.getElementById("messagebox");
+            let message=""
+            
+            if(email===""){
+                message="enter your email"
+                msgbox.style.color='red';
+            }
+            else if(age===""){
+                message="Enter your age"
+                msgbox.style.color='red';
+            }
+            else if(password===""){
+            message="Enter the password"
+            msgbox.style.color='red';
+            }
+            else{
+                message="login secessfull"
+                msgbox.style.color='green'
+            }
+            msgbox.innerText=message;
+        }
+</script>
+    </body>
+</html>
