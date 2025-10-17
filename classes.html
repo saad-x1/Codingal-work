@@ -1,0 +1,52 @@
+!<!DOCTYPE html>
+<html>
+    <head><title>Hello world</title></head>
+<body>
+    <p id="demo"></p>
+<script>
+    class student{
+        constructor(name,age,course){
+            this.name=name;
+            this.age=age;
+            this.course=course;
+        }
+        printdata(){
+        document.write("<br/>My name is"+this.name)
+        document.write("<br/>My age is"+this.age)
+        document.write("<br/>My name is"+this.course)
+    }
+static  hello(){
+    document.write("<br/>hello")
+}
+    }
+
+    let student1=new student("Ali",12,"grade 5")
+    student1.printdata();
+    let student2 = new student("saad",15,"grade 7")
+    student2.printdata()
+
+
+student.hello()
+
+class car{
+    constructor(brand){
+        this.carname=brand
+    }
+    present(){
+        return "<br/>i have" + this.carname;
+    }
+}
+class model extends car{
+    constructor (brand,model){
+        super(brand);
+        this.model=model;
+    }
+    show(){
+        return this.present()+"it is a model"+this.model
+    }
+}
+let my car = new model("ford","mustang")
+document.getElementById("demo").innerHTML=mycar.show()
+</script>
+</body>    
+</html>
