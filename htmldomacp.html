@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Objects and Arrays</title>
+</head>
+<body>
+  <h2>Objects and Arrays Display</h2>
+
+  <script>
+    let student = {
+      name: "Liam",
+      age: 15,
+      grade: "10th"
+    };
+
+    document.write("Student Details:<br>");
+    document.write("Name: " + student.name + "<br>");
+    document.write("Age: " + student.age + "<br>");
+    document.write("Grade: " + student.grade + "<br/>");
+
+    let subjects = ["Math", "Science", "English", "History"];
+
+    document.write("<b>Subjects:</b><br>");
+    document.write(subjects[0] + "<br>");
+    document.write(subjects[1] + "<br>");
+    document.write(subjects[2] + "<br>");
+    document.write(subjects[3] + "<br>");
+
+    document.write("All Subjects<br>");
+    document.write(subjects.join(", ") + "<br>");
+
+    subjects.pop();
+
+    document.write("After Removing Last Subject:<br>");
+    document.write(subjects.join(", "));
+  </script>
+</body>
+</html>
