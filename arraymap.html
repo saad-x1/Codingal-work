@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Map & Sort</title>
+</head>
+<body>
+    <p id="original"></p>
+    <p id="mapped"></p>
+    <p id="ascending"></p>
+    <p id="descending"></p>
+
+    <script>
+        const arr = [5, 2, 8, 1, 9];
+        document.getElementById("original").innerHTML = "Original: " + arr;
+        
+        const mapped = arr.map(x => x * 3);
+        document.getElementById("mapped").innerHTML = "Mapped (x3): " + mapped;
+        
+        const asc = [...mapped].sort((a,b) => a-b);
+        document.getElementById("ascending").innerHTML = "Ascending: " + asc;
+        
+        const desc = [...mapped].sort((a,b) => b-a);
+        document.getElementById("descending").innerHTML = "Descending: " + desc;
+    </script>
+</body>
+</html>
