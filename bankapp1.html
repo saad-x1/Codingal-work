@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bank App</title>
+</head>
+<body>
+
+<h2>Balance: QR <span id="balance">0</span></h2>
+
+<div>
+  <h3>Add Income</h3>
+  <input id="incomeText" placeholder="Income description">
+  <input id="incomeAmount" type="number" placeholder="Amount">
+  <button onclick="addIncome()">Add Income</button>
+</div>
+
+<div>
+  <h3>Add Expense</h3>
+  <input id="expenseText" placeholder="Expense description">
+  <input id="expenseAmount" type="number" placeholder="Amount">
+  <button onclick="addExpense()">Add Expense</button>
+</div>
+
+<h3>Transactions</h3>
+<div id="history"></div>
+
+<script>
+let balance = 0;
+
+function updateBalance() {
+  document.getElementById("balance").innerText = balance;
+}
+
+function addIncome() {
+  let text = document.getElementById("incomeText").value;
+  let amount = Number(document.getElementById("incomeAmount").value);
+  if (!text || amount <= 0) return;
+
+  balance += amount;
+  updateBalance();
+
+  addToHistory(text, "+ QR " + amount);
+
+  document.getElementById("incomeText").value = "";
+  document.getElementById("incomeAmount").value = "";
+}
+
+function addExpense() {
+  let text = document.getElementById("expenseText").value;
+  let amount = Number(document.getElementById("expenseAmount").value);
+  if (!text || amount <= 0) return;
+
+  balance -= amount;
+  updateBalance();
+
+  addToHistory(text, "- QR " + amount);
+
+  document.getElementById("expenseText").value = "";
+  document.getElementById("expenseAmount").value = "";
+}
+
+function addToHistory(label, value) {
+  let box = document.createElement("p");
+  box.innerText = label + " : " + value;
+  document.getElementById("history").prepend(box);
+}
+</script>
+
+</body>
+</html>
