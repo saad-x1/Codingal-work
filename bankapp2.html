@@ -1,0 +1,35 @@
+<h3>Add Credit</h3>
+<input id="creditText" placeholder="Credit description">
+<input id="creditAmount" type="number" placeholder="Amount">
+<button onclick="addCredit()">Add Credit</button>
+
+<script>
+function addCredit() {
+  let text = document.getElementById("creditText").value;
+  let amount = Number(document.getElementById("creditAmount").value);
+
+  if (!text || amount <= 0) return;
+
+  alert("Credit Added: " + text + " (QR " + amount + ")");
+}
+</script>
+
+
+
+
+
+<h3>Add Debit</h3>
+<input id="debitText" placeholder="Debit description">
+<input id="debitAmount" type="number" placeholder="Amount">
+<button onclick="addDebit()">Add Debit</button>
+
+<script>
+function addDebit() {
+  let text = document.getElementById("debitText").value;
+  let amount = Number(document.getElementById("debitAmount").value);
+
+  if (!text || amount <= 0) return;
+
+  alert("Debit Added: " + text + " (QR " + amount + ")");
+}
+</script>
