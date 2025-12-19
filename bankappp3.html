@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bank App</title>
+</head>
+<body>
+
+  <h2>Bank App</h2>
+  <p>Track income and expenses</p>
+
+  <input id="amount" type="number" placeholder="Amount">
+  <br><br>
+
+  <button onclick="addIncome()">Add Income</button>
+  <button onclick="addExpense()">Add Expense</button>
+
+  <p>Income: <span id="income">0</span></p>
+  <p>Expense: <span id="expense">0</span></p>
+  <p>Balance: <span id="balance">0</span></p>
+
+  <script>
+    let income = 0;
+    let expense = 0;
+
+    function addIncome() {
+      let amount = Number(document.getElementById('amount').value);
+      income += amount;
+      update();
+    }
+
+    function addExpense() {
+      let amount = Number(document.getElementById('amount').value);
+      expense += amount;
+      update();
+    }
+
+    function update() {
+      document.getElementById('income').innerText = income;
+      document.getElementById('expense').innerText = expense;
+      document.getElementById('balance').innerText = income - expense;
+      document.getElementById('amount').value = '';
+    }
+  </script>
+
+</body>
+</html>
